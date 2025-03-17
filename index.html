@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botón de Pago SIRO</title>
+    <link rel="stylesheet" href="css/stylehome.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/img/logoSIRO.jpg" alt="LogoSIRO" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#" id="help-link">Mesa de ayuda</a></li>
+          <li>
+            <a href="https://onlinesiro.com.ar/#contacto" target="_blank"
+              >Quiero recaudar con SIRO</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="title">Bienvenido al BOTÓN DE PAGO SIRO</h1>
+        <div class="subtitle-container">
+          <p class="subtitle">Ingrese el código de pago electrónico</p>
+          <img
+            src="./assets/img/iconInfo.png"
+            alt="Advertencia"
+            class="warning-icon"
+          />
+        </div>
+        <div class="input-container">
+          <input
+            type="text"
+            id="payment-code"
+            maxlength="19"
+            oninput="validateInput()"
+          />
+          <span class="char-count" id="char-count">0/19</span>
+        </div>
+        <button class="search-button">BUSCAR</button>
+      </div>
+    </main>
+
+    <!-- Cuadro de información (oculto por defecto) -->
+    <div id="help-box" class="help-box">
+      <div class="help-item">
+        <img
+          src="./assets/img/icons8-reloj-24.png"
+          alt="Reloj"
+          class="help-icon"
+        />
+        <p>Horario de atención: Lunes a Viernes de 8:30 a 17:30 Hs.</p>
+      </div>
+      <div class="help-item">
+        <img
+          src="./assets/img/icons8-correo-50.png"
+          alt="Mail"
+          class="help-icon"
+        />
+        <p>mesadeayuda@bancoroela.com.ar</p>
+      </div>
+      <div class="help-item">
+        <img
+          src="./assets/img/icons8-teléfono-50.png"
+          alt="Teléfono"
+          class="help-icon"
+        />
+        <p>0810-77-76352 opción 0</p>
+      </div>
+      <div class="help-item">
+        <img
+          src="./assets/img/icons8-burbuja-de-diálogo-50.png"
+          alt="WhatsApp"
+          class="help-icon"
+        />
+        <p>WhatsApp 351 3229808</p>
+      </div>
+    </div>
+
+    <!-- Botón flotante -->
+    <a href="https://wa.me/543513229808" target="_blank" class="chat-button">
+      <span>Chateá con nosotros</span>
+      <img
+        src="./assets/img/WhatsApp.png"
+        alt="WhatsApp"
+        class="whatsapp-icon"
+      />
+    </a>
+
+    <footer>
+      <div class="social-media">
+        <div class="social-text">
+          <p>Seguinos</p>
+        </div>
+        <div class="social-icons">
+          <a
+            href="https://www.instagram.com/sirocobranza/?hl=en"
+            target="_blank"
+          >
+            <img src="./assets/img/instagramLogo.png" alt="IGLogo" />
+          </a>
+          <a
+            href="https://www.facebook.com/SIROcobranza/?locale=es_LA"
+            target="_blank"
+          >
+            <img src="./assets/img/facebookLogo.png" alt="FaceLogo" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/sirocobranza/posts/?feedView=all"
+            target="_blank"
+          >
+            <img src="./assets/img/linkedinLogo.png" alt="LinkLogo" />
+          </a>
+        </div>
+      </div>
+      <div class="text-footer">
+        <a href="#">Preguntas Frecuentes</a>
+        <p>© Banco Roela 2025. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

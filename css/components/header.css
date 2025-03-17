@@ -1,0 +1,31 @@
+/* HEADER */
+
+header {
+    width: 100%;
+    background-color: #07693A;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.logo {
+    height: 60px;
+}
+
+nav,
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+nav ul {
+    gap: 40px;
+    font-weight: 500;
+}
+
+nav a {
+    color: white;
+}
