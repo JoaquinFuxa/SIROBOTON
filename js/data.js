@@ -16,9 +16,14 @@ const countsData = [
                 importe: 1.02,
             },
             {
-                vencimiento: new Date("2025-02-14"),
-                detalle: "Pago expensas - Periodo 2025 04",
-                importe: 0.02,
+                vencimiento: new Date("2025-02-13"),
+                detalle: "Pago expensas - Periodo 2025 03",
+                importe: 1.02,
+            },
+            {
+                vencimiento: new Date("2025-02-13"),
+                detalle: "Pago expensas - Periodo 2025 03",
+                importe: 1.02,
             },
         ],
     },

@@ -96,7 +96,7 @@ main {
 }
 
 .deudas-scroll {
-  max-height: 190px;
+  max-height: 150px;
   overflow-y: auto;
   margin-bottom: 10px;
   display: flex;
@@ -106,9 +106,9 @@ main {
 }
 
 .deuda-item {
+  min-height: 50px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 30px;
-  height: 60px;
   align-items: center;
   gap: 12px;
   background-color: white;
@@ -196,12 +196,18 @@ main {
   align-items: flex-start;
 }
 
-.text-resumen p {
+.text-info {
   margin: 0;
   font-size: 14px;
-  color: #333;
+  color: #000000;
 }
 
-.text-resumen p:first-child {
+.text-info.t {
   font-weight: bold;
+}
+
+.text-total {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
 }
