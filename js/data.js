@@ -22,17 +22,4 @@ const countsData = [
             },
         ],
     },
-    {
-        cpe: 1000000025150063903,
-        id_convenio: 5150063903,
-        name_convenio: "MARCELO CREMONA",
-        convenioImg: "../assets/img/logoSIRO",
-        deudas: [
-            {
-                vencimiento: new Date("2025-02-12"),
-                detalle: "Pago expensas - Periodo 2025 02",
-                importe: 1023090.02,
-            },
-        ],
-    },
 ];

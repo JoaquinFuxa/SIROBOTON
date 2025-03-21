@@ -86,7 +86,7 @@ main {
   align-items: center;
   margin-bottom: 10px;
   gap: 10px;
-  padding-right: 26px;
+  padding-right: 15px;
 }
 
 .select-todas p {
@@ -136,10 +136,72 @@ main {
   background-color: #DEE8E2;
   display: flex;
   flex-direction: column;
-  padding: 60px 20px 20px 20px;
+  padding: 60px 10px 20px 10px;
   border-radius: 4px;
-  gap: 5px;
   width: 280px;
   box-shadow: 0 3px 5px rgb(89, 89, 89, 0.5);
   align-items: flex-start;
+}
+
+.resumen-info {
+  display: flex;
+  align-items: left;
+  /* Centra verticalmente los elementos */
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-convenio {
+  display: flex;
+  align-items: flex-start;
+}
+
+.info-convenio>div:first-child {
+  margin-right: 15px;
+  /* Espacio entre la imagen y el texto */
+}
+
+.logoconvenio {
+  width: 40px;
+  /* Ajusta el tamaño de la imagen */
+  height: 40px;
+  border-radius: 50%;
+  /* Redondea la imagen para crear un círculo */
+  object-fit: scale-down;
+  /* Asegura que la imagen se recorte de manera apropiada */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #F1F1F1;
+}
+
+.icon-container i {
+  color: #07693A;
+  /* Color del ícono */
+  font-size: 20px;
+  /* Tamaño del ícono */
+}
+
+.text-resumen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.text-resumen p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.text-resumen p:first-child {
+  font-weight: bold;
 }

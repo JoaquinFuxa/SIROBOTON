@@ -197,3 +197,13 @@ checkboxes.forEach((checkbox) => {
 
 // Inicializar el total cuando se cargue la página
 calcularTotal();
+
+
+
+
+<div class="info-convenio">
+
+<p>Código de pago electrónico:</p>
+<p>0480000015150058293</p>
+<p>TOTAL A PAGAR:</p>
+<p id="total-a-pagar">$ 0.00</p>

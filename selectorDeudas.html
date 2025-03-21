@@ -8,6 +8,9 @@
     <!-- FAVICON -->
     <link rel="icon" href="./assets/img/siroLogo.ico" type="image/x-icon" />
 
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
     <link rel="stylesheet" href="css/styledeudad.css"" />
   </head>
   <body>
@@ -59,11 +62,40 @@
           <div class="barra-naranja">
             <h3 class="titulo-box">Resumen del pago</h3>
           </div>
-          <p>Estás por pagar a:</p>
-          <p>Cremona Marcelo</p>
-          <p>Código de pago electrónico:</p>
-          <p>0480000015150058293</p>
-          <p>TOTAL A PAGAR: <span id="total-a-pagar">$ 0.00</span></p>
+          <div class="resumen-info">
+            
+            <div class="info-convenio">
+              <div>
+                <img src="./assets/img/siroLogo.ico" alt="LogoSIRO" class="logoconvenio" />
+              </div>
+              <div class="text-resumen">
+                <p>Estás por pagar a:</p>
+                <p>Cremona Marcelo</p>
+              </div>
+            </div>
+
+            <div class="info-convenio">
+              <div class="icon-container">
+                <i class="fas fa-search id="icon-cpe"></i> <!-- Ícono de usuario -->
+              </div>
+              <div class="text-resumen">
+                <p>Código de pago electrónico:</p>
+                <p>0480000015150058293</p>
+              </div>
+            </div>
+
+            <!-- Tercer div con ícono -->
+            <div class="info-convenio">
+              <div class="icon-container">
+                <i class="fas fa-dollar-sign" id="icon-total"></i> <!-- Ícono de dinero -->
+              </div>
+              <div class="text-resumen">
+                <p>TOTAL A PAGAR:</p>
+                <p id="total-a-pagar">$ 0.00</p>
+              </div>
+            </div>
+            
+          </div>
         </div>
       </div>
     </main>
@@ -146,6 +178,6 @@
       </div>
     </footer>
     <script src="./js/data.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/selectorDeudas.js"></script>
   </body>
 </html>
