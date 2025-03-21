@@ -47,57 +47,88 @@ document.addEventListener("click", function (event) {
     }
 });
 
-// SELECTOR DE CHECKBOX DE INTERFAZ "DEUDAS A PAGAR"
-document.getElementById("selectAll").addEventListener("change", function () {
-    const checkboxes = document.querySelectorAll(".deuda-checkbox");
-    checkboxes.forEach((checkbox) => {
-        checkbox.checked = this.checked;
+//------------------------------------------------
+
+const deudasScroll = document.querySelector(".deudas-scroll");
+const selectAllCheckbox = document.getElementById("selectAll");
+const totalAPagar = document.getElementById("total-a-pagar");
+
+// Función para formatear importe
+const formatearImporte = (monto) => {
+    return monto.toLocaleString("es-AR", {
+        style: "currency",
+        currency: "ARS",
+        minimumFractionDigits: 2,
     });
-    calcularTotal(); // Recalcular el total cuando se selecciona o deselecciona todo
-});
+};
 
-const selectAll = document.getElementById("selectAll");
-const checkboxes = document.querySelectorAll(".deuda-checkbox");
+// Renderizar deudas dinámicamente
+function renderDeudas() {
+    const deudas = countsData[0].deudas;
+    deudasScroll.innerHTML = "";
 
-// Función para calcular el total a pagar
-function calcularTotal() {
-    let total = 0;
+    deudas.forEach((deuda, index) => {
+        const deudaItem = document.createElement("div");
+        deudaItem.classList.add("deuda-item");
 
-    // Recorremos todos los checkboxes
-    checkboxes.forEach((checkbox) => {
-        const deudaItem = checkbox.closest(".deuda-item"); // Obtener el contenedor de cada deuda
-        const montoTexto = deudaItem.querySelector(".monto-deuda").textContent; // Seleccionamos el segundo p (el del importe)
-
-        // Convertir el monto a número, limpiando el símbolo $ y la coma
-        const monto = parseFloat(
-            montoTexto.replace(/[^\d.-]/g, "").replace(",", "."),
-        );
-
-        // Si el checkbox está marcado, sumamos el monto
-        if (checkbox.checked) {
-            total += monto;
-        }
+        deudaItem.innerHTML = `
+      <div>
+        <p class="deuda-titulo">Vencimiento</p>
+        <p>${deuda.vencimiento.toLocaleDateString("es-AR")}</p>
+      </div>
+      <div>
+        <p class="deuda-titulo">Detalle</p>
+        <p>${deuda.detalle}</p>
+      </div>
+      <div>
+        <p class="deuda-titulo">Importe</p>
+        <p class="monto-deuda">${formatearImporte(deuda.importe)}</p>
+      </div>
+      <input type="checkbox" class="deuda-checkbox" data-index="${index}" checked />
+    `;
+        deudasScroll.appendChild(deudaItem);
     });
 
-    // Actualizar el "Total a pagar"
-    const totalPago = document.getElementById("total-a-pagar");
-    totalPago.textContent = `$ ${total.toFixed(2)}`; // Mostrar con dos decimales
+    addCheckboxListeners();
+    actualizarTotal();
 }
 
-// Escuchar cambios en los checkboxes para recalcular el total
-checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", function () {
-        // Actualizar el "Seleccionar todas" si corresponde
-        if (!this.checked) {
-            selectAll.checked = false;
-        } else if (Array.from(checkboxes).every((cb) => cb.checked)) {
-            selectAll.checked = true;
-        }
+// Escuchar cambios en los checkboxes individuales
+function addCheckboxListeners() {
+    const checkboxes = document.querySelectorAll(".deuda-checkbox");
 
-        // Recalcular el total cada vez que un checkbox cambia
-        calcularTotal();
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+            const todosMarcados = Array.from(checkboxes).every(
+                (cb) => cb.checked,
+            );
+            selectAllCheckbox.checked = todosMarcados;
+            actualizarTotal();
+        });
     });
+}
+
+// Manejo del checkbox "Seleccionar todas"
+selectAllCheckbox.addEventListener("change", () => {
+    const checkboxes = document.querySelectorAll(".deuda-checkbox");
+    checkboxes.forEach((cb) => (cb.checked = selectAllCheckbox.checked));
+    actualizarTotal();
 });
 
-// Inicializar el total cuando se cargue la página
-calcularTotal();
+// Función para actualizar el total
+function actualizarTotal() {
+    const checkboxes = document.querySelectorAll(".deuda-checkbox");
+    let total = 0;
+    const deudas = countsData[0].deudas;
+
+    checkboxes.forEach((cb, i) => {
+        if (cb.checked) {
+            total += deudas[i].importe;
+        }
+    });
+
+    totalAPagar.textContent = formatearImporte(total);
+}
+
+// Inicializar
+renderDeudas();

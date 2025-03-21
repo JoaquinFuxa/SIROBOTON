@@ -45,72 +45,8 @@
             <p>Seleccionar todas</p>
             <input type="checkbox" id="selectAll" class="deuda-checkbox-all" checked />
           </div>
-          <div class="deudas-scroll">
-            <div class="deuda-item">
-              <div>
-                <p class="deuda-titulo">Vencimiento</p>
-                <p>10/02/2025</p>
-              </div>
-              <div>
-                <p class="deuda-titulo">Detalle</p>
-                <p>Pago expensas - Periodo 2025 02</p>
-              </div>
-              <div>
-                <p class="deuda-titulo">Importe</p>
-                <p class="monto-deuda">$ 1.023.090,02</p>
-              </div>
-              <input type="checkbox" class="deuda-checkbox" checked />
-            </div>
-
-            <div class="deuda-item">
-              <div>
-                <p class="deuda-titulo">Vencimiento</p>
-                <p>10/02/2025</p>
-              </div>
-              <div>
-                <p class="deuda-titulo">Detalle</p>
-                <p>Pago expensas - Periodo 2025 02</p>
-              </div>
-              <div>
-                <p class="deuda-titulo">Importe</p>
-                <p class="monto-deuda">$ 23.090,02</p>
-              </div>
-              <input type="checkbox" class="deuda-checkbox" checked />
-            </div>
-
-            <div class="deuda-item">
-              <div>
-                <p class="deuda-titulo">Vencimiento</p>
-                <p>10/02/2025</p>
-              </div>
-              <div>
-                <p class="deuda-titulo">Detalle</p>
-                <p>Pago expensas - Periodo 2025 02</p>
-              </div>
-              <div>
-                <p class="deuda-titulo">Importe</p>
-                <p class="monto-deuda">$ 90,02</p>
-              </div>
-              <input type="checkbox" class="deuda-checkbox" checked />
-            </div>
-
-            <div class="deuda-item">
-              <div>
-                <p class="deuda-titulo">Vencimiento</p>
-                <p>10/02/2025</p>
-              </div>
-              <div>
-                <p class="deuda-titulo">Detalle</p>
-                <p>Pago expensas - Periodo 2025 02</p>
-              </div>
-              <div>
-                <p class="deuda-titulo">Importe</p>
-                <p class="monto-deuda">$ 0,02</p>
-              </div>
-              <input type="checkbox" class="deuda-checkbox" checked />
-            </div>
-
-
+          <div class="deudas-scroll" id="deudas-container">
+            <!-- Las deudas se insertarán aquí dinámicamente -->
           </div>
         
           <div class="botones-pago">
@@ -209,6 +145,7 @@
         <p>© Banco Roela 2025. Todos los derechos reservados.</p>
       </div>
     </footer>
+    <script src="./js/data.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

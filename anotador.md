@@ -122,3 +122,78 @@ right: 10px;
 .carousel-container.active {
 visibility: visible;
 }
+
+
+
+<div class="deuda-item">
+  <div>
+    <p class="deuda-titulo">Vencimiento</p>
+    <p>10/02/2025</p>
+  </div>
+  <div>
+    <p class="deuda-titulo">Detalle</p>
+    <p>Pago expensas - Periodo 2025 02</p>
+  </div>
+  <div>
+    <p class="deuda-titulo">Importe</p>
+    <p class="monto-deuda">$ 1.023.090,02</p>
+  </div>
+  <input type="checkbox" class="deuda-checkbox" checked />
+</div>
+
+
+
+// SELECTOR DE CHECKBOX DE INTERFAZ "DEUDAS A PAGAR"
+document.getElementById("selectAll").addEventListener("change", function () {
+    const checkboxes = document.querySelectorAll(".deuda-checkbox");
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = this.checked;
+    });
+    calcularTotal(); // Recalcular el total cuando se selecciona o deselecciona todo
+});
+
+const selectAll = document.getElementById("selectAll");
+const checkboxes = document.querySelectorAll(".deuda-checkbox");
+
+// Función para calcular el total a pagar
+function calcularTotal() {
+    let total = 0;
+
+    // Recorremos todos los checkboxes
+    checkboxes.forEach((checkbox) => {
+        const deudaItem = checkbox.closest(".deuda-item"); // Obtener el contenedor de cada deuda
+        const montoTexto = deudaItem.querySelector(".monto-deuda").textContent;
+
+        // Convertir el monto a número, limpiando el símbolo $ y la coma
+        const monto = parseFloat(
+            montoTexto.replace(/[^\d.-]/g, "").replace(",", "."),
+        );
+
+        // Si el checkbox está marcado, sumamos el monto
+        if (checkbox.checked) {
+            total += monto;
+        }
+    });
+
+    // Actualizar el "Total a pagar"
+    const totalPago = document.getElementById("total-a-pagar");
+    totalPago.textContent = `$ ${total.toFixed(2)}`; // Mostrar con dos decimales
+}
+
+// Escuchar cambios en los checkboxes para recalcular el total
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+        // Actualizar el "Seleccionar todas" si corresponde
+        if (!this.checked) {
+            selectAll.checked = false;
+        } else if (Array.from(checkboxes).every((cb) => cb.checked)) {
+            selectAll.checked = true;
+        }
+
+        // Recalcular el total cada vez que un checkbox cambia
+        calcularTotal();
+    });
+});
+
+// Inicializar el total cuando se cargue la página
+calcularTotal();
