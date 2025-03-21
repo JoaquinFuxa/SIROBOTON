@@ -1,0 +1,30 @@
+.deuda-checkbox,
+.deuda-checkbox-all {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4a4a4a;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+}
+
+.deuda-checkbox:checked,
+.deuda-checkbox-all:checked {
+  background-color: #575757;
+  border-color: #575757;
+}
+
+.deuda-checkbox:checked::after,
+.deuda-checkbox-all:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

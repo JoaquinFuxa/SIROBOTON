@@ -1,0 +1,42 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid #C5C5C5;
+  color: #C5C5C5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.step.active {
+  border: 3px solid #097337;
+  color: #097337;
+}
+
+.step.completed {
+  border: 3px solid #097337;
+  background-color: #097337;
+  color: #ffffff;
+}
+
+.line {
+  height: 6px;
+  width: 120px;
+  background-color: #C5C5C5;
+  flex-grow: 1;
+
+}
+
+.line.active {
+  background-color: #097337;
+}

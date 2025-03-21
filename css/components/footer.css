@@ -4,7 +4,6 @@ footer {
     background-color: #07693A;
     color: white;
     padding: 20px;
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +14,7 @@ footer {
 .social-media {
     display: flex;
     flex-direction: column;
-    gap: 10px;   
+    gap: 10px;
     font-weight: 500;
 }
 
@@ -40,12 +39,12 @@ footer {
     gap: 10px;
 }
 
-.text-footer a{
+.text-footer a {
     color: white;
     font-weight: 500;
 }
 
-.text-footer p{
+.text-footer p {
     font-weight: 100;
     font-size: 12px;
 }

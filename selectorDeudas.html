@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botón de Pago SIRO</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="./assets/img/siroLogo.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/styledeudad.css"" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/img/logoSIRO.jpg" alt="LogoSIRO" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#" id="help-link">Mesa de ayuda</a></li>
+          <li>
+            <a href="https://onlinesiro.com.ar/#contacto" target="_blank"
+              >Quiero recaudar con SIRO</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <div class="stepper">
+        <div class="step active">1</div>
+        <div class="line"></div>
+        <div class="step">2</div>
+        <div class="line"></div>
+        <div class="step">3</div>
+      </div>
+
+      
+      <div class="contenedor-pagos">
+        <div class="deudas-pagar">
+          <div class="barra-naranja">
+            <h3 class="titulo-box">Deudas a pagar</h3>
+          </div>
+          <div class="select-todas">
+            <p>Seleccionar todas</p>
+            <input type="checkbox" id="selectAll" class="deuda-checkbox-all" checked />
+          </div>
+          <div class="deudas-scroll">
+            <div class="deuda-item">
+              <div>
+                <p class="deuda-titulo">Vencimiento</p>
+                <p>10/02/2025</p>
+              </div>
+              <div>
+                <p class="deuda-titulo">Detalle</p>
+                <p>Pago expensas - Periodo 2025 02</p>
+              </div>
+              <div>
+                <p class="deuda-titulo">Importe</p>
+                <p class="monto-deuda">$ 1.023.090,02</p>
+              </div>
+              <input type="checkbox" class="deuda-checkbox" checked />
+            </div>
+
+            <div class="deuda-item">
+              <div>
+                <p class="deuda-titulo">Vencimiento</p>
+                <p>10/02/2025</p>
+              </div>
+              <div>
+                <p class="deuda-titulo">Detalle</p>
+                <p>Pago expensas - Periodo 2025 02</p>
+              </div>
+              <div>
+                <p class="deuda-titulo">Importe</p>
+                <p class="monto-deuda">$ 23.090,02</p>
+              </div>
+              <input type="checkbox" class="deuda-checkbox" checked />
+            </div>
+
+            <div class="deuda-item">
+              <div>
+                <p class="deuda-titulo">Vencimiento</p>
+                <p>10/02/2025</p>
+              </div>
+              <div>
+                <p class="deuda-titulo">Detalle</p>
+                <p>Pago expensas - Periodo 2025 02</p>
+              </div>
+              <div>
+                <p class="deuda-titulo">Importe</p>
+                <p class="monto-deuda">$ 90,02</p>
+              </div>
+              <input type="checkbox" class="deuda-checkbox" checked />
+            </div>
+
+            <div class="deuda-item">
+              <div>
+                <p class="deuda-titulo">Vencimiento</p>
+                <p>10/02/2025</p>
+              </div>
+              <div>
+                <p class="deuda-titulo">Detalle</p>
+                <p>Pago expensas - Periodo 2025 02</p>
+              </div>
+              <div>
+                <p class="deuda-titulo">Importe</p>
+                <p class="monto-deuda">$ 0,02</p>
+              </div>
+              <input type="checkbox" class="deuda-checkbox" checked />
+            </div>
+
+
+          </div>
+        
+          <div class="botones-pago">
+            <a href="./index.html" class="button-actions volver">VOLVER</a>
+            <a class="button-actions">SIGUIENTE</a>
+          </div>
+        </div>
+
+        <div class="resumen-pago">
+          <div class="barra-naranja">
+            <h3 class="titulo-box">Resumen del pago</h3>
+          </div>
+          <p>Estás por pagar a:</p>
+          <p>Cremona Marcelo</p>
+          <p>Código de pago electrónico:</p>
+          <p>0480000015150058293</p>
+          <p>TOTAL A PAGAR: <span id="total-a-pagar">$ 0.00</span></p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Cuadro de información (oculto por defecto) -->
+    <div id="help-box" class="help-box">
+      <div class="help-item">
+        <img
+          src="./assets/img/icons8-reloj-24.png"
+          alt="Reloj"
+          class="help-icon"
+        />
+        <p>Horario de atención: Lunes a Viernes de 8:30 a 17:30 Hs.</p>
+      </div>
+      <div class="help-item">
+        <img
+          src="./assets/img/icons8-correo-50.png"
+          alt="Mail"
+          class="help-icon"
+        />
+        <p>mesadeayuda@bancoroela.com.ar</p>
+      </div>
+      <div class="help-item">
+        <img
+          src="./assets/img/icons8-teléfono-50.png"
+          alt="Teléfono"
+          class="help-icon"
+        />
+        <p>0810-77-76352 opción 0</p>
+      </div>
+      <div class="help-item">
+        <img
+          src="./assets/img/icons8-burbuja-de-diálogo-50.png"
+          alt="WhatsApp"
+          class="help-icon"
+        />
+        <p>WhatsApp 351 3229808</p>
+      </div>
+    </div>
+
+    <!-- Botón flotante -->
+    <a href="https://wa.me/543513229808" target="_blank" class="chat-button">
+      <span>Chateá con nosotros</span>
+      <img
+        src="./assets/img/WhatsApp.png"
+        alt="WhatsApp"
+        class="whatsapp-icon"
+      />
+    </a>
+
+    <footer>
+      <div class="social-media">
+        <div class="social-text">
+          <p>Seguinos</p>
+        </div>
+        <div class="social-icons">
+          <a
+            href="https://www.instagram.com/sirocobranza/?hl=en"
+            target="_blank"
+          >
+            <img src="./assets/img/instagramLogo.png" alt="IGLogo" />
+          </a>
+          <a
+            href="https://www.facebook.com/SIROcobranza/?locale=es_LA"
+            target="_blank"
+          >
+            <img src="./assets/img/facebookLogo.png" alt="FaceLogo" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/sirocobranza/posts/?feedView=all"
+            target="_blank"
+          >
+            <img src="./assets/img/linkedinLogo.png" alt="LinkLogo" />
+          </a>
+        </div>
+      </div>
+      <div class="text-footer">
+        <a href="#">Preguntas Frecuentes</a>
+        <p>© Banco Roela 2025. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

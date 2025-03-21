@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import './components/button.css';
+@import './components/helpbox.css';
+@import './components/header.css';
+@import './components/footer.css';
+@import './components/contador.css';
+@import './components/checkbox.css';
+
+:root {
+  --background: #F5F5F5;
+  --primary: #07693A;
+  --secondary: #00703C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background-color: var(--background);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.contenedor-pagos {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.deudas-pagar {
+  position: relative;
+  width: 700px;
+  height: 380px;
+  background-color: #DEE8E2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 60px 20px 20px 20px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgb(89, 89, 89, 0.5);
+}
+
+.barra-naranja {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #FFAA2D;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: 0 3px 5px rgb(89, 89, 89, 0.5);
+}
+
+.titulo-box {
+  padding-top: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.select-todas {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+  padding-right: 26px;
+}
+
+.select-todas p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.deudas-scroll {
+  max-height: 190px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 5px;
+}
+
+.deuda-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 30px;
+  height: 60px;
+  align-items: center;
+  gap: 12px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgba(89, 89, 89, 0.5);
+  border: 1px solid #A9A9A9;
+}
+
+.deuda-item p {
+  font-size: 14px;
+}
+
+.deuda-titulo {
+  font-weight: bold;
+}
+
+.botones-pago {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.resumen-pago {
+  position: relative;
+  background-color: #DEE8E2;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px 20px 20px;
+  border-radius: 4px;
+  gap: 5px;
+  width: 280px;
+  box-shadow: 0 3px 5px rgb(89, 89, 89, 0.5);
+  align-items: flex-start;
+}

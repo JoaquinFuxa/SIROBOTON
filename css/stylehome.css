@@ -5,121 +5,122 @@
 @import './components/footer.css';
 
 :root {
-    --background: #F5F5F5;
-    --primary: #07693A;
-    --secondary: #00703C;
+  --background: #F5F5F5;
+  --primary: #07693A;
+  --secondary: #00703C;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-html, body {
-    height: 100%; /* Asegura que el html y body ocupen toda la altura de la pantalla */
-    display: flex;
-    flex-direction: column; /* El contenido será en columna: header, main, footer */
+html,
+body {
+  height: 100%;
+  /* Asegura que el html y body ocupen toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  /* El contenido será en columna: header, main, footer */
 }
 
 main {
-    background-color: var(--background);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-grow: 1; /* Hace que main ocupe el espacio restante */
+  background-color: var(--background);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1;
+  /* Hace que main ocupe el espacio restante */
 }
 
 
 /* MAIN */
 .container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  /* Estilo para el título */
-  .title {
-    font-size: 26px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    position: relative;
-    padding-bottom: 5px;
-    color: var(--secondary);
-  }
-  
-  .title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #07693A; /* Color del delineado */
-  }
-  
-  /* Estilo para el subtítulo y el icono */
-  .subtitle-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .subtitle {
-    font-size: 20px;
-    font-weight: 500;
-    margin-right: 10px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 3px;
-  }
-  
-  .subtitle::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #686868; /* Color del delineado */
-  }
-  
-  .warning-icon {
-    width: 20px;
-    height: 20px;
-  }
-  
-  /* Estilos para el input */
-  .input-container {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  input {
-    width: 350px;
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); 
-  }
-  
-  .char-count {
-    margin-left: 10px;
-    font-size: 20px;
-    color: #ff0000;
-    font-weight: 500;
-  }
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+  gap: 25px;
+}
 
-  
+/* Estilo para el título */
+.title {
+  font-size: 26px;
+  font-weight: 500;
+  position: relative;
+  color: var(--secondary);
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #07693A;
+  /* Color del delineado */
+}
+
+/* Estilo para el subtítulo y el icono */
+.subtitle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 10px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.subtitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #686868;
+  /* Color del delineado */
+}
+
+.warning-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilos para el input */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 350px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.char-count {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #ff0000;
+  font-weight: 500;
+}
