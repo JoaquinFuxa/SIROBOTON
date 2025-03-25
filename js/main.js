@@ -25,24 +25,18 @@ function validateInput() {
 }
 
 // LOGICA PARA DESPLEGAR EL CUADRO DE MESA DE AYUDA
-
 const helpLink = document.getElementById("help-link");
 const helpBox = document.getElementById("help-box");
 
-// Mostrar el cuadro de ayuda al hacer clic en "Mesa de ayuda"
-helpLink.addEventListener("click", function (event) {
-    event.preventDefault();
-    helpBox.classList.toggle("show"); // Alternar la clase 'show'
-
-    // Calcular la posición del botón para colocar el cuadro de ayuda justo debajo
-    const buttonRect = helpLink.getBoundingClientRect();
-    helpBox.style.top = `${buttonRect.bottom + window.scrollY + 15}px`; // 10px de margen
-    helpBox.style.left = `${buttonRect.left + window.scrollX}px`; // Alinearlo con el botón
+helpLink.addEventListener("mouseenter", () => {
+    helpBox.classList.add("show");
 });
-
-// Ocultar el cuadro de ayuda si se hace clic fuera de él
-document.addEventListener("click", function (event) {
-    if (!helpBox.contains(event.target) && event.target !== helpLink) {
-        helpBox.classList.remove("show");
-    }
+helpLink.addEventListener("mouseleave", () => {
+    helpBox.classList.remove("show");
+});
+helpBox.addEventListener("mouseenter", () => {
+    helpBox.classList.add("show");
+});
+helpBox.addEventListener("mouseleave", () => {
+    helpBox.classList.remove("show");
 });

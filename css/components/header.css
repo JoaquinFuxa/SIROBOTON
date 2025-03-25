@@ -7,6 +7,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 15px;
+    position: relative;
 }
 
 .logo {
@@ -17,7 +18,6 @@ nav,
 nav ul {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-right: 10px;
 }
 
@@ -30,6 +30,96 @@ nav a {
     color: white;
 }
 
+/* Agregar animación a la línea debajo de "Mesa de ayuda" */
+#help-link {
+    position: relative;
+    /* Necesario para posicionar la línea debajo del texto */
+    cursor: pointer;
+    /* Cambia el cursor para indicar que es interactivo */
+}
+
+/* Pseudo-elemento que crea la línea animada */
+#help-link::after {
+    content: '';
+    /* Necesario para generar el pseudo-elemento */
+    position: absolute;
+    bottom: -5px;
+    /* Ajustamos la distancia de la línea respecto al texto */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FCB040;
+    /* El color de la línea */
+    transform: scaleX(0);
+    /* Inicialmente la línea está "desaparecida" */
+    transform-origin: bottom right;
+    /* Hace que la línea crezca de derecha a izquierda */
+    transition: transform 0.4s ease;
+    /* Animación para el efecto */
+}
+
+/* Cuando el mouse pasa por encima de "Mesa de ayuda", la línea aparece */
+#help-link:hover::after {
+    transform: scaleX(1);
+    /* Hace que la línea crezca de izquierda a derecha */
+}
+
+/* Nuevo contenedor para posicionamiento relativo */
+.help-container {
+    display: inline-block;
+}
+
+/* Ajustamos la posición del help-box para que salga debajo y centrado */
+.help-box {
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, 20px);
+    background-color: #FCB040;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 0px 0px 10px 10px;
+    width: 380px;
+    z-index: 1000;
+    font-weight: 500;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+.help-box p {
+    color: black;
+}
+
+/* Cuando se activa, aparece suavemente */
+.help-box.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+
+.help-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.help-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+
+@media (max-width: 680px) {
+    .help-box {
+        left: 50%;
+        font-size: 12px;
+        width: 340px;
+        padding: 10px;
+    }
+}
 
 @media (max-width: 480px) {
     .logo {
@@ -38,10 +128,13 @@ nav a {
 
     nav,
     nav ul {
-        margin: 0;
+        margin-left: 5px;
+        margin-right: 0;
+        gap: 10px;
     }
 
     nav a {
         font-size: 14px;
     }
+
 }
