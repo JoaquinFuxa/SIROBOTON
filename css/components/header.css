@@ -29,3 +29,19 @@ nav ul {
 nav a {
     color: white;
 }
+
+
+@media (max-width: 480px) {
+    .logo {
+        height: 50px;
+    }
+
+    nav,
+    nav ul {
+        margin: 0;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}

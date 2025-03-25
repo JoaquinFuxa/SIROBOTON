@@ -48,3 +48,34 @@ footer {
     font-weight: 100;
     font-size: 12px;
 }
+
+
+@media (max-width: 480px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .social-media {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .text-footer {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+    }
+
+    .text-footer p {
+        font-size: 10px;
+    }
+}
