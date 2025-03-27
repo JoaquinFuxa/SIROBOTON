@@ -43,13 +43,17 @@ main {
 .contenedor-pagos {
   display: flex;
   gap: 40px;
-  max-width: 1200px;
   padding: 20px;
+  max-width: 1100px;
+  width: 100%;
 }
 
 .deudas-pagar {
   position: relative;
-  width: 700px;
+  width: 100%;
+  /* Ancho relativo */
+  max-width: 700px;
+  /* Ancho máximo */
   height: 380px;
   background-color: #DEE8E2;
   display: flex;
@@ -103,7 +107,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .deuda-item {
@@ -139,7 +143,8 @@ main {
   flex-direction: column;
   padding: 60px 10px 20px 10px;
   border-radius: 4px;
-  width: 280px;
+  max-width: 280px;
+  width: 100%;
   box-shadow: 0 3px 5px rgb(89, 89, 89, 0.5);
   align-items: flex-start;
 }
@@ -147,7 +152,6 @@ main {
 .resumen-info {
   display: flex;
   align-items: left;
-  /* Centra verticalmente los elementos */
   justify-content: flex-start;
   flex-direction: column;
   gap: 15px;
@@ -263,6 +267,15 @@ main {
 }
 
 .blur {
-  filter: blur(5px);
+  filter: blur(3px);
   pointer-events: none;
+}
+
+
+@media (max-width: 950px) {
+  .deuda-item {
+    min-height: 70px;
+    font-size: 10px;
+    padding-left: 5px;
+  }
 }

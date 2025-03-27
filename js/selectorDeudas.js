@@ -92,12 +92,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainContent = document.querySelector("main");
     const headercontent = document.querySelector("header");
     const footercontent = document.querySelector("footer");
+    const chatButton = document.getElementById("chat-button");
 
     nextButton.addEventListener("click", function () {
         popupContainer.classList.remove("hidden");
         mainContent.classList.add("blur");
         headercontent.classList.add("blur");
         footercontent.classList.add("blur");
+        chatButton.classList.add("blur");
     });
 
     omitButton.addEventListener("click", function () {
@@ -105,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mainContent.classList.remove("blur");
         headercontent.classList.remove("blur");
         footercontent.classList.remove("blur");
+        chatButton.classList.remove("blur");
     });
 
     nextPopupButton.addEventListener("click", function () {
@@ -124,5 +127,6 @@ document.addEventListener("DOMContentLoaded", function () {
         mainContent.classList.remove("blur");
         headercontent.classList.remove("blur");
         footercontent.classList.remove("blur");
+        chatButton.classList.remove("blur");
     });
 });
