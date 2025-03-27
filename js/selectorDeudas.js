@@ -83,3 +83,46 @@ function actualizarTotal() {
 
 // Inicializar
 renderDeudas();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const nextButton = document.querySelector(".button-actions:not(.volver)");
+    const popupContainer = document.getElementById("popup-container");
+    const omitButton = document.getElementById("omit-btn");
+    const nextPopupButton = document.getElementById("next-btn");
+    const mainContent = document.querySelector("main");
+    const headercontent = document.querySelector("header");
+    const footercontent = document.querySelector("footer");
+
+    nextButton.addEventListener("click", function () {
+        popupContainer.classList.remove("hidden");
+        mainContent.classList.add("blur");
+        headercontent.classList.add("blur");
+        footercontent.classList.add("blur");
+    });
+
+    omitButton.addEventListener("click", function () {
+        popupContainer.classList.add("hidden");
+        mainContent.classList.remove("blur");
+        headercontent.classList.remove("blur");
+        footercontent.classList.remove("blur");
+    });
+
+    nextPopupButton.addEventListener("click", function () {
+        const emailInput = document.getElementById("email-input").value.trim();
+
+        // Expresión regular para validar un email
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (emailRegex.test(emailInput)) {
+            // Email válido o campo vacío (porque es opcional)
+            alert("Email válido. Procediendo...");
+            // Aquí puedes continuar con la lógica de tu app
+        } else {
+            alert("Por favor, ingresa un email válido.");
+        }
+        popupContainer.classList.add("hidden");
+        mainContent.classList.remove("blur");
+        headercontent.classList.remove("blur");
+        footercontent.classList.remove("blur");
+    });
+});

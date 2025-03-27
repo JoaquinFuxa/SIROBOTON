@@ -207,3 +207,58 @@ calcularTotal();
 <p>0480000015150058293</p>
 <p>TOTAL A PAGAR:</p>
 <p id="total-a-pagar">$ 0.00</p>
+
+
+
+
+
+<div id="popup-container" class="popup hidden">
+  <div class="popup-content">
+    <div class="barra-naranja">
+      <h3 class="titulo-box">Ingresa un mail para recibir un comprobante</h3>
+    </div>
+    <p>Ingresa un mail para recibir un comprobante</p>
+    <input type="email" id="email-input" placeholder="Ingrese su email" />
+    <div class="popup-buttons">
+      <button class="button-actions volver" id="omit-btn">OMITIR</button>
+      <button class="button-actions" id="next-btn">SIGUIENTE</button>
+    </div>
+  </div>
+</div>
+
+
+.hidden {
+  display: none;
+}
+
+/*
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popup input {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+*/
+
+/* Fondo borroso cuando el popup está visible */
+.blur {
+  filter: blur(5px);
+  pointer-events: none;
+}

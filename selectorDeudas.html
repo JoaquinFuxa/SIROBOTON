@@ -136,42 +136,6 @@
       </div>
     </main>
 
-    <!-- Cuadro de información (oculto por defecto) -->
-    <div id="help-box" class="help-box">
-      <div class="help-item">
-        <img
-          src="./assets/img/icons8-reloj-24.png"
-          alt="Reloj"
-          class="help-icon"
-        />
-        <p>Horario de atención: Lunes a Viernes de 8:30 a 17:30 Hs.</p>
-      </div>
-      <div class="help-item">
-        <img
-          src="./assets/img/icons8-correo-50.png"
-          alt="Mail"
-          class="help-icon"
-        />
-        <p>mesadeayuda@bancoroela.com.ar</p>
-      </div>
-      <div class="help-item">
-        <img
-          src="./assets/img/icons8-teléfono-50.png"
-          alt="Teléfono"
-          class="help-icon"
-        />
-        <p>0810-77-76352 opción 0</p>
-      </div>
-      <div class="help-item">
-        <img
-          src="./assets/img/icons8-burbuja-de-diálogo-50.png"
-          alt="WhatsApp"
-          class="help-icon"
-        />
-        <p>WhatsApp 351 3229808</p>
-      </div>
-    </div>
-
     <!-- Botón flotante -->
     <a href="https://wa.me/543513229808" target="_blank" class="chat-button">
       <span>Chateá con nosotros</span>
@@ -181,6 +145,26 @@
         class="whatsapp-icon"
       />
     </a>
+
+    <div id="popup-container" class="popup hidden">
+      <div class="barra-naranja">
+        <h3 class="titulo-box">Ingresá un email para recibir el comprobante de pago</h3>
+      </div>
+      <p>Email</p>
+      <input type="email" id="email-input" class="email-input" placeholder="Ingrese su email" />
+      <div class="info-mail">
+        <img
+          src="./assets/img/iconInfo.png"
+          alt="Advertencia"
+          class="warning-icon"
+        />
+        <p>Este campo es OPCIONAL, si no ingresas un email, vas a poder realizar el sin recibir el comprobante.</p>
+      </div>
+      <div class="botones-mail">
+        <a class="button-actions volver" id="omit-btn">OMITIR</a>
+        <a class="button-actions" id="next-btn">SIGUIENTE</a>
+      </div>
+    </div>
 
     <footer>
       <div class="social-media">
