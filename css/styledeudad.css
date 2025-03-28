@@ -290,6 +290,18 @@ main {
 }
 
 @media (max-width: 760px) {
+
+  main {
+    flex-direction: column-reverse;
+    padding: 0;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .principal {
+    height: auto;
+  }
+
   .contenedor-pagos {
     flex-direction: column;
   }
