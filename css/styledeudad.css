@@ -279,3 +279,18 @@ main {
     padding-left: 5px;
   }
 }
+
+@media (max-width: 760px) {
+  .contenedor-pagos {
+    flex-direction: column;
+  }
+
+  .resumen-pago {
+    max-width: 760px;
+  }
+
+  main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
