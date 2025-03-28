@@ -130,3 +130,45 @@ document.addEventListener("DOMContentLoaded", function () {
         chatButton.classList.remove("blur");
     });
 });
+
+let currentIndex = 0;
+const slides = document.querySelectorAll(".carousel-image");
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    const carousel = document.querySelector(".carousel");
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+setInterval(nextSlide, 10000);
+
+// LOGICA PARA DESPLEGAR EL CUADRO DE MESA DE AYUDA
+const helpLink = document.getElementById("help-link");
+const helpBox = document.getElementById("help-box");
+
+helpLink.addEventListener("mouseenter", () => {
+    helpBox.classList.add("show");
+});
+helpLink.addEventListener("mouseleave", () => {
+    helpBox.classList.remove("show");
+});
+helpBox.addEventListener("mouseenter", () => {
+    helpBox.classList.add("show");
+});
+helpBox.addEventListener("mouseleave", () => {
+    helpBox.classList.remove("show");
+});

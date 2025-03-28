@@ -1,4 +1,3 @@
-// FUNCIÓN PARA VALIDAR QUE SOLO SE INGRESEN 19 DÍGITOS NUMÉRICOS
 function validateInput() {
     const input = document.getElementById("payment-code");
     let value = input.value;
@@ -40,3 +39,28 @@ helpBox.addEventListener("mouseenter", () => {
 helpBox.addEventListener("mouseleave", () => {
     helpBox.classList.remove("show");
 });
+
+let currentIndex = 0;
+const slides = document.querySelectorAll(".carousel-image");
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    const carousel = document.querySelector(".carousel");
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+setInterval(nextSlide, 10000);

@@ -67,28 +67,51 @@
     </header>
 
     <main>
-      <div class="container">
-        <h1 class="title">Bienvenido al BOTÓN DE PAGO SIRO</h1>
-        <div class="subtitle-container">
-          <p class="subtitle">Ingrese el código de pago electrónico</p>
+      <div class="carousel-container">
+        <div class="carousel">
           <img
-            src="./assets/img/iconInfo.png"
-            alt="Advertencia"
-            class="warning-icon"
+            src="./assets/img/pruebaCarrusel4.jpg"
+            alt="Slide 1"
+            class="carousel-image"
+          />
+          <img
+            src="./assets/img/pruebaCarrusel5.jfif"
+            alt="Slide 2"
+            class="carousel-image"
+          />
+          <img
+            src="./assets/img/pruebaCarrusel3.jpeg"
+            alt="Slide 3"
+            class="carousel-image"
           />
         </div>
-        <div class="input-container">
-          <input
-            type="text"
-            id="payment-code"
-            maxlength="19"
-            oninput="validateInput()"
-          />
-          <span class="char-count" id="char-count">0/19</span>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+      <div class="principal">
+        <div class="container">
+          <h1 class="title">Bienvenido al BOTÓN DE PAGO SIRO</h1>
+          <div class="subtitle-container">
+            <p class="subtitle">Ingrese el código de pago electrónico</p>
+            <img
+              src="./assets/img/iconInfo.png"
+              alt="Advertencia"
+              class="warning-icon"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              id="payment-code"
+              maxlength="19"
+              oninput="validateInput()"
+            />
+            <span class="char-count" id="char-count">0/19</span>
+          </div>
+          <a href="./selectorDeudas.html" class="search-button" id="buscar-btn">
+            BUSCAR
+          </a>
         </div>
-        <a href="./selectorDeudas.html" class="search-button" id="buscar-btn">
-          BUSCAR
-        </a>
       </div>
     </main>
 

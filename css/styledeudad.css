@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=mont@400,500,700&display=swap');
 @import './components/button.css';
-@import './components/helpbox.css';
 @import './components/header.css';
 @import './components/footer.css';
 @import './components/contador.css';
 @import './components/checkbox.css';
+@import './components/carousel.css';
 
 :root {
   --background: #F5F5F5;
@@ -33,11 +33,20 @@ main {
   background-color: var(--background);
   text-align: center;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.principal {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  flex-grow: 1;
 }
 
 .contenedor-pagos {

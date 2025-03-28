@@ -3,6 +3,7 @@
 @import './components/button.css';
 @import './components/header.css';
 @import './components/footer.css';
+@import './components/carousel.css';
 
 :root {
   --background: #F5F5F5;
@@ -32,16 +33,26 @@ main {
   background-color: var(--background);
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 20px;
   width: 100%;
   flex-grow: 1;
   /* Hace que main ocupe el espacio restante */
 }
 
-
 /* MAIN */
+
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -130,7 +141,20 @@ input {
 }
 
 
+
 @media (max-width: 480px) {
+
+  main {
+    flex-direction: column-reverse;
+    padding-left: 0;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .principal {
+    height: auto;
+  }
+
   .container {
     padding: 15px;
     gap: 15px;
