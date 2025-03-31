@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=mont@400,500,700&display=swap');
 @import './components/button.css';
 @import './components/header.css';
 @import './components/footer.css';
@@ -11,11 +10,19 @@
   --secondary: #00703C;
 }
 
+@font-face {
+  font-family: 'Mont';
+  src: url('../fonts/Mont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Mont', sans-serif;
   text-decoration: none;
   list-style-type: none;
 }
